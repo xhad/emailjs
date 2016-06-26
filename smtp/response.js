@@ -75,7 +75,7 @@ var SMTPResponse = function(stream, timeout, onerror)
   stream.setTimeout(timeout, timedout);
 };
 
-exports.monitor = function(stream, timeout, onerror) 
+exports.monitor = function(/* stream */)
 {
-  return new SMTPResponse(stream, timeout, onerror);
+    return new SMTPResponse(arguments[0], arguments[1], arguments[2]);
 };
